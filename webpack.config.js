@@ -22,6 +22,7 @@ module.exports = {
   },
   devtool: 'cheap-module-eval-source-map',
   devServer: {
+    https: true,
     contentBase: path.join(__dirname, 'public')
   }
 };
