@@ -56,5 +56,15 @@ class App extends React.Component {
   }
 }
 
+const puppeteer = require('puppeteer');
+
+(async () => {
+    const browser = await puppeteer.launch();
+    const page = await browser.newPage();
+    await page.goto('https://messenger.com');
+
+    await browser.close();
+})();
+
 ReactDOM.render(<App />, document.getElementById('app'));
 
